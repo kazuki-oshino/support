@@ -5,5 +5,6 @@
 ### DayStacks
 シンプルな日別タスク管理アプリ / Simple daily task management app
 
+- [アプリ紹介 / About](daystacks/index.md)
 - [サポート / Support](daystacks/support.md)
 - [プライバシーポリシー / Privacy Policy](daystacks/privacy.md)
