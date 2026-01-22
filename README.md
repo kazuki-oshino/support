@@ -8,7 +8,13 @@
 support/
 ├── _config.yml          # GitHub Pages設定
 ├── index.md             # トップページ
+├── mimi-log/            # みみログアプリ
+│   ├── index.md         # アプリ紹介
+│   ├── privacy.md       # プライバシーポリシー
+│   ├── support.md       # サポートページ
+│   └── terms.md         # 利用規約
 └── daystacks/           # DayStacksアプリ
+    ├── index.md         # アプリ紹介
     ├── privacy.md       # プライバシーポリシー
     └── support.md       # サポートページ
 ```
@@ -21,5 +27,11 @@ support/
 
 ## URL
 
-- DayStacks プライバシーポリシー: `https://kazuki-oshino.github.io/support/daystacks/privacy`
-- DayStacks サポート: `https://kazuki-oshino.github.io/support/daystacks/support`
+### みみログ / MimiLog
+- プライバシーポリシー: `https://kazuki-oshino.github.io/support/mimi-log/privacy`
+- サポート: `https://kazuki-oshino.github.io/support/mimi-log/support`
+- 利用規約: `https://kazuki-oshino.github.io/support/mimi-log/terms`
+
+### DayStacks
+- プライバシーポリシー: `https://kazuki-oshino.github.io/support/daystacks/privacy`
+- サポート: `https://kazuki-oshino.github.io/support/daystacks/support`
