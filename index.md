@@ -24,3 +24,11 @@
 - [サポート / Support](enerbreak/support.md)
 - [プライバシーポリシー / Privacy Policy](enerbreak/privacy.md)
 - [利用規約 / Terms of Service](enerbreak/terms.md)
+
+### のこりび / Nokoribi
+カップル向けカウントダウン＆バケットリストアプリ / A couple-focused countdown and bucket list app
+
+- [アプリ紹介 / About](nokoribi/index.md)
+- [サポート / Support](nokoribi/support.md)
+- [プライバシーポリシー / Privacy Policy](nokoribi/privacy.md)
+- [利用規約 / Terms of Service](nokoribi/terms.md)
