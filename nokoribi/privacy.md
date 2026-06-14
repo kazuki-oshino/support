@@ -24,7 +24,10 @@
 本アプリで作成されたバケットリスト（やりたいことリスト）のデータは、ソロモードではデバイス内にのみ保存されます。カップルモードでは、パートナーとの共有のためにFirebase Firestoreにクラウド同期されます。
 
 ### 写真データ
-達成記録に添付された写真は、お使いのデバイス内にのみ保存されます。写真データが外部サーバーに送信されることはありません。
+達成記録に添付された写真は、通常お使いのデバイス内にのみ保存されます。オンライン写真共有を有効にした場合、ユーザーが共有を選んだ写真のみFirebase Storageに保存され、共有状態などのメタデータはFirebase Firestoreに保存されます。共有写真は現在のパートナーがオンライン閲覧できます。
+
+### 写真共有の報告情報
+パートナーから共有された写真を報告した場合、報告対象の写真ID、バケットリスト項目ID、匿名ユーザーID、報告日時、報告状態などの情報をFirebase Firestoreに保存します。これらの情報は、報告した写真をあなたの画面で非表示にすること、不適切な共有写真の確認、および安全なサービス運営のために使用されます。
 
 ### 広告に関する情報
 本アプリでは、Google AdMobを使用して広告を表示しています。AdMobは、広告のパーソナライズのために以下の情報を収集する場合があります：
@@ -43,6 +46,7 @@ iOS 14.5以降では、広告のパーソナライズのためにトラッキン
 収集した情報は、以下の目的で利用されます：
 
 - カップルモードでのパートナーとのデータ共有
+- オンライン写真共有の提供、報告対応、不適切な共有写真の確認
 - 広告の表示および最適化
 - アプリの改善
 
@@ -96,7 +100,10 @@ The App uses Firebase Anonymous Authentication. We do not collect personally ide
 Bucket list data created in the App is stored only on your device in Solo Mode. In Couple Mode, data is synced to Firebase Firestore for sharing with your partner.
 
 ### Photo Data
-Photos attached to achievement records are stored only on your device. Photo data is never transmitted to external servers.
+Photos attached to achievement records are usually stored only on your device. If you enable online photo sharing, only the photos you choose to share are stored in Firebase Storage, and metadata such as sharing status is stored in Firebase Firestore. Shared photos can be viewed online by your current partner.
+
+### Shared Photo Reports
+If you report a photo shared by your partner, we store information such as the reported photo ID, bucket list item ID, anonymous user IDs, report date, and report status in Firebase Firestore. This information is used to hide the reported photo from your screen, review inappropriate shared photos, and operate the service safely.
 
 ### Advertising Information
 The App uses Google AdMob to display advertisements. AdMob may collect the following information for ad personalization:
@@ -115,6 +122,7 @@ On iOS 14.5 and later, we may request permission for tracking to personalize ads
 The information collected is used for the following purposes:
 
 - Sharing data with your partner in Couple Mode
+- Providing online photo sharing, handling reports, and reviewing inappropriate shared photos
 - Displaying and optimizing advertisements
 - Improving the App
 

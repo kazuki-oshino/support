@@ -11,10 +11,18 @@ A couple-focused countdown and bucket list app. Visualize the remaining days of 
 ## よくある質問 / FAQ
 
 ### Q: データはどこに保存されますか？
-A: ソロモードでは、すべてのデータはデバイス内にのみ保存されます。カップルモード（パートナー連携）をご利用の場合は、Firebase Firestoreを通じてクラウドに同期され、パートナーと共有されます。写真データは常にデバイス内にのみ保存されます。
+A: ソロモードでは、すべてのデータはデバイス内にのみ保存されます。カップルモード（パートナー連携）をご利用の場合は、Firebase Firestoreを通じてクラウドに同期され、パートナーと共有されます。写真データは通常デバイス内にのみ保存されますが、オンライン写真共有を有効にした場合、共有を選んだ達成写真のみFirebase Storageにアップロードされ、現在のパートナーがオンライン閲覧できます。
 
 ### Q: Where is my data stored?
-A: In Solo Mode, all data is stored only on your device. When using Couple Mode (partner linking), data is synced to the cloud via Firebase Firestore and shared with your partner. Photo data is always stored only on your device.
+A: In Solo Mode, all data is stored only on your device. When using Couple Mode (partner linking), data is synced to the cloud via Firebase Firestore and shared with your partner. Photo data is usually stored only on your device, but if you enable online photo sharing, only the achievement photos you choose to share are uploaded to Firebase Storage so your current partner can view them online.
+
+---
+
+### Q: 共有写真を報告するには？
+A: パートナーから共有された写真のメニューから「写真を報告」を選択してください。報告した写真はあなたの画面で非表示になり、運営が内容を確認します。これ以上写真共有を続けたくない場合は、アプリ左上のパートナー連携画面から連携を解除できます。
+
+### Q: How do I report a shared photo?
+A: Open the menu on a photo shared by your partner and choose "Report photo." The reported photo will be hidden from your screen and reviewed by the operator. If you no longer want to continue sharing photos with that partner, open Partner Link from the top-left of the app and unlink.
 
 ---
 
@@ -90,9 +98,9 @@ A: Subscriptions (monthly/yearly) require recurring payments, and Pro features a
 
 ## お問い合わせ / Contact
 
-不具合の報告やご要望がございましたら、以下のメールアドレスまでお問い合わせください。
+不具合の報告、ご要望、写真共有に関するお問い合わせがございましたら、以下のメールアドレスまでお問い合わせください。
 
-For bug reports or feature requests, please contact us at the email address below.
+For bug reports, feature requests, or questions about photo sharing, please contact us at the email address below.
 
 📧 **techgamelife.net@gmail.com**
 
