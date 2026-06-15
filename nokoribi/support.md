@@ -11,10 +11,10 @@ A couple-focused countdown and bucket list app. Visualize the remaining days of 
 ## よくある質問 / FAQ
 
 ### Q: データはどこに保存されますか？
-A: ソロモードでは、すべてのデータはデバイス内にのみ保存されます。カップルモード（パートナー連携）をご利用の場合は、Firebase Firestoreを通じてクラウドに同期され、パートナーと共有されます。写真データは通常デバイス内にのみ保存されますが、オンライン写真共有を有効にした場合、共有を選んだ達成写真のみFirebase Storageにアップロードされ、現在のパートナーがオンライン閲覧できます。
+A: ソロモードでは、すべてのデータはデバイス内にのみ保存されます。カップルモード（パートナー連携）をご利用の場合は、データがオンライン上で同期され、パートナーと共有されます。写真データは通常デバイス内にのみ保存されますが、オンライン写真共有を有効にした場合、共有を選んだ達成写真のみオンラインにアップロードされ、現在のパートナーがオンライン閲覧できます。
 
 ### Q: Where is my data stored?
-A: In Solo Mode, all data is stored only on your device. When using Couple Mode (partner linking), data is synced to the cloud via Firebase Firestore and shared with your partner. Photo data is usually stored only on your device, but if you enable online photo sharing, only the achievement photos you choose to share are uploaded to Firebase Storage so your current partner can view them online.
+A: In Solo Mode, all data is stored only on your device. When using Couple Mode (partner linking), data is synced online and shared with your partner. Photo data is usually stored only on your device, but if you enable online photo sharing, only the achievement photos you choose to share are uploaded online so your current partner can view them online.
 
 ---
 
