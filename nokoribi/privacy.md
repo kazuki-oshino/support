@@ -1,6 +1,6 @@
 # プライバシーポリシー
 
-最終更新日: 2026年3月15日
+最終更新日: 2026年7月26日
 
 ## はじめに
 
@@ -19,6 +19,18 @@
 
 ### Firebase Anonymous Authentication
 本アプリでは、Firebase Anonymous Authenticationを使用しています。メールアドレスやパスワードなどの個人を特定できる認証情報は収集しません。匿名の識別子のみが生成され、カップルモードでのデータ同期に使用されます。
+
+### 利用状況および分析情報
+本アプリでは、利用状況を把握して機能や品質を改善するためにFirebase Analyticsを使用しています。Firebase Analyticsでは、以下の情報を収集します：
+
+- アプリの起動、オンボーディング完了、各機能の利用、購入フローの結果などの操作イベント
+- アプリのバージョン、デバイスの種類、OSなどの技術情報
+- アプリのインストール単位で生成される匿名の識別子
+- IPアドレスから推定されるおおよその地域
+
+ニックネーム、生年月日、性別、Firebase UID、カップルID、パートナーUID、招待コード、バケットリストや共有やることの本文、コメント、写真、その他の自由入力内容は、Firebase Analyticsへ送信しません。Firebase Analyticsで収集した情報は、広告のパーソナライズには使用しません。
+
+アカウントを削除した場合、本アプリはデバイス上のAnalytics識別子をリセットします。すでに送信された情報は、Googleのデータ保持方針に従って保持される場合があります。詳細については、[Googleのプライバシーポリシー](https://policies.google.com/privacy)をご確認ください。
 
 ### バケットリストデータ
 本アプリで作成されたバケットリスト（やりたいことリスト）のデータは、ソロモードではデバイス内にのみ保存されます。カップルモードでは、パートナーとの共有のためにFirebase Firestoreにクラウド同期されます。
@@ -47,12 +59,12 @@ iOS 14.5以降では、広告のパーソナライズのためにトラッキン
 
 - カップルモードでのパートナーとのデータ共有
 - オンライン写真共有の提供、報告対応、不適切な共有写真の確認
+- アプリの利用状況の分析および機能・品質の改善
 - 広告の表示および最適化
-- アプリの改善
 
 ## 第三者への提供
 
-本アプリは、法令に基づく場合を除き、ユーザーの個人情報を第三者に提供することはありません。
+本アプリは、認証、データ同期、オンライン写真共有、利用状況の分析、広告表示のために、Firebase、Google Analytics、Google AdMobなどの第三者サービスを利用しています。これらのサービスは、各サービスのプライバシーポリシーに従って情報を処理する場合があります。本アプリはユーザーの個人情報を販売しません。法令に基づく場合を除き、上記の目的以外で第三者へ提供することはありません。
 
 ## アプリ内課金
 
@@ -76,7 +88,7 @@ iOS 14.5以降では、広告のパーソナライズのためにトラッキン
 
 # Privacy Policy
 
-Last updated: March 15, 2026
+Last updated: July 26, 2026
 
 ## Introduction
 
@@ -95,6 +107,18 @@ This data is stored on your device. Only when using Couple Mode (partner linking
 
 ### Firebase Anonymous Authentication
 The App uses Firebase Anonymous Authentication. We do not collect personally identifiable authentication information such as email addresses or passwords. Only an anonymous identifier is generated and used for data synchronization in Couple Mode.
+
+### Usage and Analytics Information
+The App uses Firebase Analytics to understand usage and improve its features and quality. Firebase Analytics collects the following information:
+
+- Interaction events such as app launches, onboarding completion, feature usage, and purchase-flow results
+- Technical information such as the app version, device type, and operating system
+- An anonymous identifier generated for each app installation
+- Approximate region inferred from the IP address
+
+We do not send nicknames, dates of birth, gender, Firebase UIDs, couple IDs, partner UIDs, invite codes, bucket-list or shared-to-do text, comments, photos, or any other free-form content to Firebase Analytics. Information collected through Firebase Analytics is not used for ad personalization.
+
+When you delete your account, the App resets the Analytics identifier stored on your device. Previously transmitted information may be retained in accordance with Google's data-retention practices. For more details, please review [Google's Privacy Policy](https://policies.google.com/privacy).
 
 ### Bucket List Data
 Bucket list data created in the App is stored only on your device in Solo Mode. In Couple Mode, data is synced to Firebase Firestore for sharing with your partner.
@@ -123,12 +147,12 @@ The information collected is used for the following purposes:
 
 - Sharing data with your partner in Couple Mode
 - Providing online photo sharing, handling reports, and reviewing inappropriate shared photos
+- Analyzing app usage and improving features and quality
 - Displaying and optimizing advertisements
-- Improving the App
 
 ## Disclosure to Third Parties
 
-The App does not share your personal information with third parties except as required by law.
+The App uses third-party services such as Firebase, Google Analytics, and Google AdMob for authentication, data synchronization, online photo sharing, usage analytics, and advertising. These services may process information according to their respective privacy policies. The App does not sell your personal information or disclose it to third parties for purposes other than those described above, except as required by law.
 
 ## In-App Purchases
 
