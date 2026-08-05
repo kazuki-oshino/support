@@ -2,19 +2,27 @@
 
 ## のこりび / Nokoribi
 
-カップル向けカウントダウン＆バケットリストアプリです。残りの人生の日数を可視化し、パートナーと一緒にやりたいことリストを管理できます。
+ふたりの残り時間、やりたいこと、共有するやること、記念日、叶えた思い出をひとつにまとめられる、カップル・夫婦向けアプリです。
 
-A couple-focused countdown and bucket list app. Visualize the remaining days of your life and manage a shared bucket list with your partner.
+An app for couples to keep life countdowns, bucket lists, shared to-dos, anniversaries, and achieved memories together.
 
 ---
 
 ## よくある質問 / FAQ
 
 ### Q: データはどこに保存されますか？
-A: ソロモードでは、すべてのデータはデバイス内にのみ保存されます。カップルモード（パートナー連携）をご利用の場合は、データがオンライン上で同期され、パートナーと共有されます。写真データは通常デバイス内にのみ保存されますが、オンライン写真共有を有効にした場合、共有を選んだ達成写真のみオンラインにアップロードされ、現在のパートナーがオンライン閲覧できます。
+A: プロフィールやバケットリストなどは、ソロモードではデバイス内に保存され、カップルモード（パートナー連携）ではオンラインで同期されます。記念日は、個人用・共有用ともにオンラインに保存されます。個人用記念日は本人だけが利用でき、共有用記念日は現在のパートナーと共有されます。達成写真は通常デバイス内に保存されますが、共有を選んだ達成写真と記念日のカバー画像はオンラインに保存されます。
 
 ### Q: Where is my data stored?
-A: In Solo Mode, all data is stored only on your device. When using Couple Mode (partner linking), data is synced online and shared with your partner. Photo data is usually stored only on your device, but if you enable online photo sharing, only the achievement photos you choose to share are uploaded online so your current partner can view them online.
+A: Profile and bucket-list data is stored on your device in Solo Mode and synchronized online in Couple Mode (partner linking). Anniversaries are stored online for both personal and shared use. Personal anniversaries are available only to you, while shared anniversaries are shared with your current partner. Achievement photos are usually stored on your device, but achievement photos you choose to share and anniversary cover images are stored online.
+
+---
+
+### Q: 記念日はどのように使えますか？
+A: 誕生日、結婚記念日、出会った日などを登録すると、次の記念日までの日数と、その日から積み重ねた年月を確認できます。個人用とふたり用を分けて管理でき、カバー写真も設定できます。無料では個人用・共有用それぞれ3件まで、Proではそれぞれ10件まで登録できます。
+
+### Q: How do anniversaries work?
+A: Add birthdays, wedding anniversaries, the day you met, and other important dates to see the days until the next occurrence and the time elapsed since the date. You can keep personal and shared anniversaries separate and add optional cover photos. You can create up to 3 anniversaries in each scope for free or up to 10 with Pro.
 
 ---
 
@@ -29,20 +37,22 @@ A: Open the menu on a photo shared by your partner and choose "Report photo." Th
 ### Q: Pro機能とは何ですか？
 A: Pro機能には以下が含まれます：
 - 広告非表示
-- フォトメモリー（達成記録に最大3枚の写真を添付）
-- テーマカラーカスタマイズ（7種類のプリセット）
+- フォトメモリーの上限を拡張（達成記録に最大3枚の写真を添付）
+- 8種類すべてのテーマカラー
 - 詳細ペース分析
 - ウィジェットカスタマイズ
 - カスタム目標日の設定
+- 個人用・共有用の記念日をそれぞれ最大10件まで登録
 
 ### Q: What are the Pro features?
 A: Pro features include:
 - Ad-free experience
-- Photo memories (attach up to 3 photos to achievements)
-- Theme color customization (7 presets)
+- Expanded photo memories (attach up to 3 photos to achievements)
+- All 8 theme colors
 - Detailed pace analysis
 - Widget customization
 - Custom target date setting
+- Up to 10 personal and 10 shared anniversaries
 
 ---
 
@@ -51,16 +61,26 @@ A: 無料機能には以下が含まれます：
 - 残り日数のカウントダウン表示
 - バケットリスト（やりたいことリスト）の管理
 - カップルモード（パートナー連携）
+- 共有やることリスト
+- Memory Line（叶えた思い出の振り返り）
+- 個人用・共有用の記念日をそれぞれ3件まで登録
+- 達成記録に写真を1枚添付
 - 基本ウィジェット
 - 寿命進捗バーの表示
+- ForestとOceanのテーマカラー
 
 ### Q: What features are available for free?
 A: Free features include:
 - Remaining days countdown display
 - Bucket list management
 - Couple Mode (partner linking)
+- Shared to-do lists
+- Memory Line for revisiting achieved memories
+- Up to 3 personal and 3 shared anniversaries
+- One photo per achievement record
 - Basic widgets
 - Lifespan progress bar display
+- Forest and Ocean theme colors
 
 ---
 
