@@ -1,6 +1,6 @@
 # プライバシーポリシー
 
-最終更新日: 2026年8月5日
+最終更新日: 2026年9月11日
 
 ## はじめに
 
@@ -14,11 +14,12 @@
 - ニックネーム
 - 生年月日
 - 性別
+- カスタム目標日（設定した場合）
 
-これらのプロフィールデータは、お使いのデバイス内に保存されます。カップルモード（パートナー連携）をご利用の場合のみ、Firebase Firestoreを通じてクラウドに同期されます。ソロモードでは、プロフィールデータはデバイス内にのみ保存されます。記念日データの保存方法については、下記の「記念日データ」をご確認ください。
+これらのプロフィールデータは、お使いのデバイス内とFirebase Firestoreに保存されます。ソロモードでもオンライン保存を行い、パートナー連携中は共有用のプロフィールも保存します。
 
 ### Firebase Anonymous Authentication
-本アプリでは、Firebase Anonymous Authenticationを使用しています。メールアドレスやパスワードなどの個人を特定できる認証情報は収集しません。匿名の識別子のみが生成され、記念日データの保存およびカップルモードでのデータ同期に使用されます。
+本アプリでは、Firebase Anonymous Authenticationを使用し、メールアドレスやパスワードの登録は求めません。匿名の利用者IDが生成され、本人のプロフィール・本文・設定・記念日の保存・取得と、パートナー連携中のデータ共有に使用されます。保存・復旧の対象は、以下に記載するアプリのバージョンと条件によって異なります。Appleでのサインインは提供していません。
 
 ### 利用状況および分析情報
 本アプリでは、利用状況を把握して機能や品質を改善するためにFirebase Analyticsを使用しています。Firebase Analyticsでは、以下の情報を収集します：
@@ -33,7 +34,15 @@
 アカウントを削除した場合、本アプリはデバイス上のAnalytics識別子をリセットします。すでに送信された情報は、Googleのデータ保持方針に従って保持される場合があります。詳細については、[Googleのプライバシーポリシー](https://policies.google.com/privacy)をご確認ください。
 
 ### バケットリストデータ
-本アプリで作成されたバケットリスト（やりたいことリスト）のデータは、ソロモードではデバイス内にのみ保存されます。カップルモードでは、パートナーとの共有のためにFirebase Firestoreにクラウド同期されます。
+v1.12以降では、本アプリで作成されたバケットリスト（やりたいことリスト）と達成記録の本文を、デバイス内とFirebase Firestoreに保存します。本文には、タイトル、期限、カテゴリ、達成日、コメントなどが含まれます。ソロモードでは本人の個人領域に保存します。パートナー連携中は共有領域に保存し、現在のパートナーと共有します。Memory Lineは達成済みの本文から表示します。端末内の達成写真は、この本文のオンライン保存には含めません。
+
+v1.11以前のソロモードには、本文を個人領域へオンライン保存する機能はありません。パートナー連携中は、Firebase Firestoreで本文を共有します。
+
+### 利用者設定
+v1.12以降では、選択したテーマ、残り時間の表示単位、記念日の表示範囲を、デバイス内とFirebase Firestoreの本人専用領域に保存します。v1.11以前では、これらの設定を本人専用領域へオンライン保存する機能はありません。Proの購入資格はAppleで確認します。
+
+### 共有TODO
+共有TODOのタイトル、完了状態、並び順などは、現在のパートナーと使うリストとしてFirebase Firestoreに保存します。個人用のバックアップは作りません。
 
 ### 記念日データ
 本アプリで作成された記念日のタイトル、日付、カバー画像に関する情報は、個人用・共有用ともにFirebase FirestoreおよびFirebase Storageへ保存されます。個人用の記念日は作成したユーザー本人だけが利用でき、共有用の記念日は現在連携しているパートナーと共有されます。これらの情報は、記念日の表示・編集・保存、およびパートナーとの共同編集に使用されます。
@@ -60,6 +69,7 @@ iOS 14.5以降では、広告のパーソナライズのためにトラッキン
 
 収集した情報は、以下の目的で利用されます：
 
+- 本人のプロフィール・本文・設定の保存と、同じ匿名識別子で認証できる場合の保存済みデータの取得
 - カップルモードでのパートナーとのデータ共有
 - 記念日の表示・編集・保存、およびパートナーとの共同編集
 - オンライン写真共有の提供、報告対応、不適切な共有写真の確認
@@ -73,6 +83,20 @@ iOS 14.5以降では、広告のパーソナライズのためにトラッキン
 ## アプリ内課金
 
 本アプリでは、Pro機能をご利用いただくためのサブスクリプションおよび買い切り課金を提供しています。課金情報はAppleによって処理され、本アプリが直接収集することはありません。
+
+## 復旧、連携解除、アカウント削除
+
+以下は、v1.12以降で行う保存済み本文・設定の復旧、本文の引継ぎ、削除処理についての説明です。
+
+オンラインからの復旧には、同じ匿名識別子で認証され、対象データがサーバーに保存済みである必要があります。新しい端末でデータを復旧するためのログイン機能は未提供です。未送信の変更や端末内だけの達成写真は、データのない端末へオンライン復旧できません。OSの移行で写真ファイルと対応する参照が揃って残った場合は保持しますが、OS移行や認証の回復を保証するものではありません。
+
+連携解除時は、共有していたバケットリストと達成記録の本文を変更できない状態で残し、それぞれが接続したときに本人の個人領域へ引き継ぎます。共有TODO・共有記念日・共有カバーは削除処理の対象となり、共有写真の閲覧は停止します。個人の記念日・カバーと端末内の達成写真は連携解除だけでは削除しません。
+
+アカウント削除時は、本人のプロフィール・個人本文・設定・移行用の記録・個人記念日・カバーなどのクラウドデータ、認証アカウント、端末内の本人データを順に削除します。共有本文は元パートナーが引き継ぐ記録として、元の追加者の匿名識別子を含めて残ります。
+
+削除したアカウントへのデータ再作成を防ぐため、匿名識別子に対応する削除済みの記録を保持します。削除処理中は再開に必要な共有先などを保持しますが、削除完了後に残す最小の記録には本文・設定・共有先を含めません。
+
+削除途中の失敗時は処理を再試行し、端末の片付けまで成功してから完了とします。共有データの削除処理の失敗により、オンラインにデータが残る場合があります。共有の閲覧停止と、すべての保存領域からの物理的な消去は同じ意味ではありません。
 
 ## お子様のプライバシー
 
@@ -92,7 +116,7 @@ iOS 14.5以降では、広告のパーソナライズのためにトラッキン
 
 # Privacy Policy
 
-Last updated: August 5, 2026
+Last updated: September 11, 2026
 
 ## Introduction
 
@@ -106,11 +130,12 @@ The App requires the following profile information:
 - Nickname
 - Date of birth
 - Gender
+- Custom target date (if you set one)
 
-This profile data is stored on your device. Only when using Couple Mode (partner linking) is it synced to the cloud via Firebase Firestore. In Solo Mode, profile data is stored only on your device. For information about anniversary storage, see “Anniversary Data” below.
+This profile data is stored on your device and in Firebase Firestore, including in Solo Mode. A shared profile is also stored while you are linked with a partner.
 
 ### Firebase Anonymous Authentication
-The App uses Firebase Anonymous Authentication. We do not collect personally identifiable authentication information such as email addresses or passwords. Only an anonymous identifier is generated and used to store anniversary data and synchronize data in Couple Mode.
+The App uses Firebase Anonymous Authentication and does not require you to register an email address or password. An anonymous user identifier is generated and used to store and retrieve your profile, text records, preferences and anniversaries, and to share data while linked with a partner. Storage and recovery depend on the app version and conditions described below. Sign in with Apple is not provided.
 
 ### Usage and Analytics Information
 The App uses Firebase Analytics to understand usage and improve its features and quality. Firebase Analytics collects the following information:
@@ -125,7 +150,15 @@ We do not send nicknames, dates of birth, gender, Firebase UIDs, couple IDs, par
 When you delete your account, the App resets the Analytics identifier stored on your device. Previously transmitted information may be retained in accordance with Google's data-retention practices. For more details, please review [Google's Privacy Policy](https://policies.google.com/privacy).
 
 ### Bucket List Data
-Bucket list data created in the App is stored only on your device in Solo Mode. In Couple Mode, data is synced to Firebase Firestore for sharing with your partner.
+In v1.12 and later, bucket-list and achievement text created in the App is stored on your device and in Firebase Firestore. These records include titles, deadlines, categories, completion dates and comments. In Solo Mode, records are stored in your personal area. While linked with a partner, records are stored in the shared area and shared with your current partner. Memory Line displays completed records from this text. This online text storage does not include achievement photos stored on your device.
+
+In v1.11 and earlier, Solo Mode does not provide online storage of text records in a personal area. While linked with a partner, text records are shared through Firebase Firestore.
+
+### User Preferences
+In v1.12 and later, your chosen theme, countdown unit and anniversary-view selection are stored on your device and in your private area in Firebase Firestore. In v1.11 and earlier, these preferences are not saved online in a private area. Pro entitlement is checked with Apple.
+
+### Shared To-Dos
+Shared to-do titles, completion status and ordering are stored in Firebase Firestore as a list for your current partnership. A personal backup is not created.
 
 ### Anniversary Data
 Anniversary titles, dates, and cover-image information created in the App are stored in Firebase Firestore and Firebase Storage for both personal and shared anniversaries. Personal anniversaries are available only to the user who created them, while shared anniversaries are shared with the currently linked partner. This information is used to display, edit, and store anniversaries and to support collaborative editing with a partner.
@@ -152,6 +185,7 @@ On iOS 14.5 and later, we may request permission for tracking to personalize ads
 
 The information collected is used for the following purposes:
 
+- Storing your profile, text records and preferences, and retrieving saved data when authenticated with the same anonymous identifier
 - Sharing data with your partner in Couple Mode
 - Displaying, editing, and storing anniversaries and supporting collaborative editing with a partner
 - Providing online photo sharing, handling reports, and reviewing inappropriate shared photos
@@ -165,6 +199,20 @@ The App uses third-party services such as Firebase, Google Analytics, and Google
 ## In-App Purchases
 
 The App offers subscriptions and a one-time purchase to access Pro features. Payment information is processed by Apple and is not collected directly by the App.
+
+## Recovery, Unlinking and Account Deletion
+
+The following describes recovery of saved text records and preferences, transfer of text records, and deletion in v1.12 and later.
+
+Online recovery requires authentication with the same anonymous identifier and data already saved to the server. A login for recovering data on a new device is not provided. Unsent changes and achievement photos stored only on your device cannot be recovered online onto an empty device. If an OS transfer preserves both photo files and their matching references, the App retains them; this does not guarantee OS transfer or recovery of authentication.
+
+Unlinking preserves shared bucket-list and achievement text in a read-only state. When each person connects, the App transfers this text to their personal area. Shared to-dos, shared anniversaries and shared covers are subject to deletion, and viewing shared photos stops. Unlinking alone does not delete personal anniversaries, personal covers or achievement photos stored on your device.
+
+Account deletion removes your cloud profile, personal text, preferences, transfer records, personal anniversaries and covers, followed by your authentication account and personal data on the device. Shared text remains for your former partner to inherit, including the original contributor’s anonymous identifier.
+
+A deleted-account record associated with your anonymous identifier is retained to prevent data from being recreated for that account. During deletion, information such as the former sharing destination is retained to allow the process to resume. The minimal record retained after deletion is complete contains no text, preferences or sharing destination.
+
+Interrupted deletion can be retried and is completed only after device cleanup succeeds. Failures while deleting shared data may leave data online. Stopping shared access does not mean physical erasure from every storage location.
 
 ## Children's Privacy
 
