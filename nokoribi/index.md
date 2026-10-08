@@ -23,6 +23,20 @@ A couple-focused countdown and bucket list app. Visualize the remaining days of 
 - **ウィジェットカスタマイズ** - ウィジェットの表示をカスタマイズ
 - **カスタム目標日** - 自由に目標日を設定
 
+### v1.18で追加予定 / Planned for v1.18
+
+- **ホームスタイルの切り替え（無料）** - 写真を使うModernと従来のClassicから選択
+- **ホーム写真のプリセット（無料）** - Modernで4種類のプリセット写真から選択
+- **自分の写真をホームに設定（Pro）** - Modernの写真を選び、表示位置や倍率を調整して保存
+
+- **Home styles (free)** - Choose the photo-based Modern style or the existing Classic style
+- **Home photo presets (free)** - Choose from 4 preset photos for Modern
+- **Your own home photo (Pro)** - Choose a photo for Modern, adjust its position and zoom, and save it
+
+自分の写真の設定・変更にはProが必要です。Proの有効期間が終了しても、適用済みの写真は表示を続けます。ホームスタイル・写真・表示位置は端末内に保存し、パートナーとの共有・オンライン同期・オンライン復旧の対象にはなりません。
+
+Pro is required to set or change your own photo. An already applied photo continues to display after Pro expires. Home style, photo and display-position settings stay on your device; they are not shared with your partner, synced online or recoverable online.
+
 ---
 
 ## プラン / Plans

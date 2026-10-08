@@ -1,6 +1,6 @@
 # プライバシーポリシー
 
-最終更新日: 2026年9月11日
+最終更新日: 2026年10月8日
 
 ## はじめに
 
@@ -43,6 +43,11 @@ v1.12以降では、選択したテーマ、残り時間の表示単位、記念
 
 ### 共有TODO
 共有TODOのタイトル、完了状態、並び順などは、現在のパートナーと使うリストとしてFirebase Firestoreに保存します。個人用のバックアップは作りません。
+
+### v1.18で追加予定のホーム設定・ホーム写真
+ホームスタイル（Modern／Classic）、選択した写真と表示位置・倍率は、テーマカラーとは別にデバイス内の専用領域に保存します。自分のホーム写真もデバイス内だけに保存し、Firebase FirestoreやFirebase Storageへのアップロード、パートナー共有、オンライン同期は行いません。これらはオンライン復旧の対象外です。デバイス内保存であることは、OSのバックアップ・移行対象からの除外を保証するものではなく、それらを使った復旧も保証していません。
+
+ホーム設定と自分のホーム写真は、連携解除では保持し、アカウント削除ではデバイス内から削除します。自分の写真の設定・変更にはProが必要ですが、Proの有効期間が終了したことだけを理由に適用済みの写真を削除しません。
 
 ### 記念日データ
 本アプリで作成された記念日のタイトル、日付、カバー画像に関する情報は、個人用・共有用ともにFirebase FirestoreおよびFirebase Storageへ保存されます。個人用の記念日は作成したユーザー本人だけが利用でき、共有用の記念日は現在連携しているパートナーと共有されます。これらの情報は、記念日の表示・編集・保存、およびパートナーとの共同編集に使用されます。
@@ -116,7 +121,7 @@ iOS 14.5以降では、広告のパーソナライズのためにトラッキン
 
 # Privacy Policy
 
-Last updated: September 11, 2026
+Last updated: October 8, 2026
 
 ## Introduction
 
@@ -159,6 +164,11 @@ In v1.12 and later, your chosen theme, countdown unit and anniversary-view selec
 
 ### Shared To-Dos
 Shared to-do titles, completion status and ordering are stored in Firebase Firestore as a list for your current partnership. A personal backup is not created.
+
+### Home Settings and Home Photos Planned for v1.18
+Your home style (Modern or Classic), photo selection, display position and zoom are saved in a dedicated area on your device, separately from your theme color. Your own home photo also stays only on your device; it is not uploaded to Firebase Firestore or Firebase Storage, shared with your partner or synced online. These settings and photos cannot be recovered online. Device-only storage does not guarantee exclusion from OS backups or transfers, and recovery through them is not guaranteed.
+
+Home settings and your own home photo are retained when you unlink and removed from your device when you delete your account. Pro is required to set or change your own photo, but an already applied photo is not deleted solely because Pro expires.
 
 ### Anniversary Data
 Anniversary titles, dates, and cover-image information created in the App are stored in Firebase Firestore and Firebase Storage for both personal and shared anniversaries. Personal anniversaries are available only to the user who created them, while shared anniversaries are shared with the currently linked partner. This information is used to display, edit, and store anniversaries and to support collaborative editing with a partner.
