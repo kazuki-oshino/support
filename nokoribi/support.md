@@ -18,6 +18,22 @@ A: Profile and bucket-list data is stored on your device in Solo Mode and synchr
 
 ---
 
+### Q: v1.18で追加予定のホームスタイル・写真はどう使えますか？
+A: 設定から、写真を使うModernと従来のClassicを無料で切り替えられます。Modernでは4種類のプリセット写真も無料です。自分の写真を設定・変更するにはProが必要で、保存前に表示位置や倍率を調整できます。Proの有効期間が終了しても、適用済みの写真は表示を続けます。プリセットを選んで保存すると、以前の自分の写真はProを再開するだけでは戻りません。改めて写真を選んで保存してください。
+
+### Q: How will the home styles and photos planned for v1.18 work?
+A: In Settings, you can switch between the photo-based Modern style and the existing Classic style for free. Modern also offers 4 free preset photos. Pro is required to set or change your own photo, and you can adjust its position and zoom before saving. An already applied photo continues to display after Pro expires. If you select and save a preset, renewing Pro alone does not restore your previous photo; select and save the photo again.
+
+---
+
+### Q: ホーム設定とホーム写真は共有・復旧できますか？（v1.18で追加予定）
+A: ホームのスタイル・写真・表示位置は、テーマカラーとは別に端末内だけに保存します。パートナー共有やオンライン同期は行わず、オンラインから復旧することもできません。端末内保存であることは、OSのバックアップ・移行対象からの除外を保証するものではなく、それらを使った復旧も保証していません。連携解除では保持し、本人のアカウント削除では端末内から削除します。
+
+### Q: Can I share or recover home settings and photos? (Planned for v1.18)
+A: Home style, photo and display-position settings are saved only on your device, separately from your theme color. They are not shared with your partner, synced online or recoverable online. Device-only storage does not guarantee exclusion from OS backups or transfers, and recovery through them is not guaranteed. They are retained when you unlink and removed from your device when you delete your account.
+
+---
+
 ### Q: 記念日はどのように使えますか？
 A: 誕生日、結婚記念日、出会った日などを登録すると、次の記念日までの日数と、その日から積み重ねた年月を確認できます。個人用とふたり用を分けて管理でき、カバー写真も設定できます。無料では個人用・共有用それぞれ3件まで、Proではそれぞれ10件まで登録できます。
 
