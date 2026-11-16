@@ -32,3 +32,11 @@
 - [サポート / Support](nokoribi/support.md)
 - [プライバシーポリシー / Privacy Policy](nokoribi/privacy.md)
 - [利用規約 / Terms of Service](nokoribi/terms.md)
+
+### HAKU（はく） / HAKU
+数息観と丹田呼吸 ― 日本の呼吸法を実践するブレスワークアプリ / Japanese breathwork — susokukan and tanden breathing
+
+- [アプリ紹介 / About](haku/index.md)
+- [サポート / Support](haku/support.md)
+- [プライバシーポリシー / Privacy Policy](haku/privacy.md)
+- [利用規約 / Terms of Service](haku/terms.md)
